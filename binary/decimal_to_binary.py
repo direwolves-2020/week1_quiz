@@ -6,6 +6,7 @@ def decimal_to_binary(num):
     """
 
     #binary = bin(num).replace("0b", "")
+
     quotient = 0
     binary = ''
 
@@ -19,6 +20,9 @@ def decimal_to_binary(num):
         num = quotient
         binary += str(remainder)
 
+    binary = binary[::-1]
+
     return int(binary)
 
 assert decimal_to_binary(9) == 1001
+assert decimal_to_binary(14) == 1110

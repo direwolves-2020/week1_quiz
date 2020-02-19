@@ -6,8 +6,10 @@ def binary_to_decimal(num):
     Iterate through the length of the binary number and based on the position, square the digit
     """
 
-    #separate the number into digits
+    #separate the number into digits and reverse it so last digit is position 0
     digits = [int(x) for x in str(num)]
+    digits = digits[::-1]
+
     decimal = 0
 
     #multiply each digit by the square of its position
@@ -19,5 +21,6 @@ def binary_to_decimal(num):
 
     return decimal
 
-assert binary_to_decimal(1001) == 9
+assert binary_to_decimal(1110) == 14
+assert binary_to_decimal(1111) == 15
 
